@@ -12,7 +12,7 @@
             </p>
             <div id="downloads">
                 <p>Vanilla Tweaks resourcepack: <a href="resourcepack.zip">download</a></p>
-                <button onclick="showhideEmbeds()">Toggle hamster</button>
+                <button onclick="toggleEmbeds()">Toggle hamster</button>
                 <div id="embeds">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cgRiRLaSyFM" title="YouTube video player" frameborder="0" allow="autoplay"></iframe>
                 </div>
@@ -20,10 +20,10 @@
         </main>
 
         <script>
-            var x = document.getElementById("embeds")
-            x.style.display = "none";
+            document.getElementById("embeds").style.display = "none";
 
-            function showhideEmbeds() {
+            function toggleEmbeds() {
+                var x = document.getElementById("embeds")
                 if (x.style.display === "none") {
                     x.style.display = "block";
                 } else {
