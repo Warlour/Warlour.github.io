@@ -40,18 +40,14 @@ a {
 #measurements {
     width: 90vw;
     max-width: 40em;
-    margin-left: 0 auto;
-}
-div:nth-of-type(1) h2 {
-    size: 50%;
+    margin-left: 0%;
 }
 
-div:nth-of-type(1) h3 {
-    padding-left: 2.5%;
+#measurements h3 {
+    padding-left: 60%;
 }
 
-div:nth-of-type(1) p {
-    padding-left: 5%;
+#measurements p {
+    padding-left: 65%;
     color: rgb(173, 173, 173);
 }
-
