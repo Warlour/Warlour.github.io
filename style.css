@@ -4,10 +4,11 @@
 
 body {
     font: 400 16px "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
-    background: rgba(37, 37, 37, 1.0);
-    background: -webkit-linear-gradient(bottom, rgba(37, 37, 37, 1.0), rgba(15, 15, 15, 1.0));
-    background: -moz-linear-gradient(bottom, rgba(37, 37, 37, 1.0), rgba(15, 15, 15, 1.0));
-    background: linear-gradient(to top, rgba(37, 37, 37, 1.0), rgba(15, 15, 15, 1.0));
+    background: rgb(15,15,15);
+    background: -moz-linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(37,37,37,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(37,37,37,1) 100%);
+    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(37,37,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f0f",endColorstr="#252525",GradientType=1); 
     margin: 0;
     min-height: 100vh;
     color: rgb(255, 255, 255);
@@ -37,14 +38,13 @@ a {
     margin-top: 0;
 }
 
-/* Add sliding down effect */
+/* Add sliding from left to right effect */
 .schoolContent.show {
     display: block;
-    animation: slide-down 0.5s;
-    margin-top: 10px;
+    animation: slide-right 0.5s;
 }
 
-@keyframes slide-down {
+@keyframes slide-right {
     0% {
         transform: translateX(-115%);
     }
@@ -55,10 +55,11 @@ a {
 
 .schoolContent.hide {
     display: block;
-    animation: slide-up 0.5s;
+    animation: slide-left 0.5s;
 }
 
-@keyframes slide-up {
+/* Add sliding from right to left effect */
+@keyframes slide-left {
     0% {
         transform: translateX(0);
     }
