@@ -15,16 +15,43 @@
                 <p>
                     <a href="files">Go to file downloads</a>
                 </p>
-            
-            <h2>SPACE DUPLO Project</h2>
-                <p>
-                    <a href="duplo">Go to project</a>
-                </p>
 
-            <h2>Ligningsløser projekt</h2>
-                <p>
-                    <a href="ligning">Go to project</a>
-                </p>
+            <div class="schoolHeader">
+                <h2>School Projects</h2>
+            </div>
+
+            <div class="schoolContent">
+                <h3>SPACE DUPLO Project</h3>
+                <p><a href="duplo">Go to project</a></p>
+
+                <h3>Ligningsløser Project</h3>
+                <p><a href="ligning">Go to project</a></p>
+            </div>
+
+            <script>
+                var header = document.querySelector('.schoolHeader');
+                var content = document.querySelector('.schoolContent');
+
+                header.addEventListener('click', function() {
+                    if (content.classList.contains('show')) {
+                        content.classList.remove('show');
+                        content.classList.add('hide');
+                        setTimeout(function() {
+                            content.style.display = "none";
+                        }, 500)
+                    } else {
+                        content.style.display = "block";
+                        content.classList.remove('hide');
+                        content.classList.add('show');
+                    }
+                });
+            </script>
+            <!-- <h2>School Projects<details><summary></summary>
+                <h3>SPACE DUPLO Project</h3>
+                    <p><a href="duplo">Go to project</a></p>
+                <h3>Ligningsløser Project</h3>
+                    <p><a href="ligning">Go to project</a></p>
+            </details></h2> -->
         </main>
     </body>
 </html>
