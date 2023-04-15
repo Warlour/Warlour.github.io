@@ -23,12 +23,18 @@ main {
 
 a {
     text-decoration: none;
-    color: #77b2ee;
+    color: rgb(147, 198, 233);
+}
+
+h3 a {
+    text-decoration: none;
+    color: rgb(61, 150, 209);
 }
 
 /* Set style for the header */
 .schoolHeader {
     cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 
 /* Set initial visiblity of content to hidden */
@@ -39,39 +45,44 @@ a {
 }
 
 /* Add sliding from left to right effect */
-.schoolContent.show {
-    display: block;
-    animation: slide-right 0.5s;
-}
-
-@keyframes slide-right {
+@keyframes slide-in {
     0% {
-        transform: translateX(-115%);
+        transform: translateX(-50%);
+        opacity: 0;
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
     }
+}
+
+/* Add sliding from right to left effect */
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+.schoolContent.show {
+    display: block;
+    animation: slide-in 0.5s;
 }
 
 .schoolContent.hide {
     display: block;
-    animation: slide-left 0.5s;
-}
-
-/* Add sliding from right to left effect */
-@keyframes slide-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-115%);
-    }
+    animation: slide-out 0.5s;
 }
 
 #downloads {
     width: 90vw;
     max-width: 40em;
     margin: 0 auto;
+    animation: slide-in 1s;
 }
 
 #embeds {
